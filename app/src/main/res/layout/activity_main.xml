@@ -6,45 +6,104 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txt_01"
         android:layout_width="208dp"
         android:layout_height="106dp"
-        android:text="Hello Sushant!"
+        android:clickable="false"
+        android:text="Welcome to RemoteSense!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.518" />
+        app:layout_constraintVertical_bias="0.025"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/editTxt"
+        android:layout_width="249dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Type your Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_01"
+        app:layout_constraintVertical_bias="0.095" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Click-monster"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821" />
-
-    <Switch
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="261dp"
-        android:layout_marginLeft="261dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="62dp"
-        android:layout_marginRight="62dp"
-        android:layout_marginBottom="260dp"
-        android:text="Switch"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:layout_width="123dp"
+        android:layout_height="48dp"
+        android:onClick="sendMessage"
+        android:text="Click-here"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/editTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />/>
+        app:layout_constraintTop_toBottomOf="@+id/txt_01" />
+
+    <ScrollView
+        android:layout_width="410dp"
+        android:layout_height="242dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.437">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/small_padding"
+            android:paddingLeft="@dimen/small_padding"
+            android:paddingEnd="@dimen/small_padding"
+            android:paddingRight="@dimen/small_padding">
+
+            <TextView
+                android:id="@+id/name_text"
+                style="@style/NameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/name_title"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/star_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/yellow_star"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="632dp"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingTop="@dimen/small_padding"
+                android:text="@string/bio_text" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myrecycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

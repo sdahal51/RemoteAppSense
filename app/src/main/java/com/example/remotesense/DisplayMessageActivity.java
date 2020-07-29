@@ -61,8 +61,9 @@ public class DisplayMessageActivity extends AppCompatActivity {
         donebutton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Toast.makeText(DisplayMessageActivity.this, "Name Entered", Toast.LENGTH_SHORT).show();
-                //textview.setText("Nice to meet you" + editText.getText().toString() + "  have a good one");
+                Toast.makeText(DisplayMessageActivity.this, "Goodbye! Exiting App", Toast.LENGTH_SHORT).show();
+                finishActivity(0);
+                System.exit(0);
             }
             });
         previous_button = findViewById(R.id.button_dp);

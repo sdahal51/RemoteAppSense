@@ -11,7 +11,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 //Firebase imports
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     // private static final int RC_SIGN_IN = 123;
     Button next_Activity_button;
+    Button about_button;
+    Switch exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,9 +60,24 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        about_button = findViewById(R.id.button_abt);
+        about_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, About.class);
+                startActivity(intent);
+            }
+        });
+
+        exit= findViewById(R.id.exit);
+        exit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                finishActivity(0);
+                System.exit(0);
+            }
+        });
+
         final EditText nametext= findViewById(R.id.editText);
-
-
         next_Activity_button = (Button) findViewById(R.id.main_btn);
         next_Activity_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,17 +123,6 @@ public class MainActivity extends AppCompatActivity {
                         });
             }
         });
-    }
 
-//
-//    public void sendMessage(android.view.View view){
-//        switch (view.getId()){
-//            case R.id.main_btn:
-//                Toast.makeText(this, "Button pressed ", Toast.LENGTH_SHORT).show();
-//                TextView txtHello= findViewById(R.id.txt_01);
-//                EditText edittext= findViewById(R.id.editTxt);
-//                txtHello.setText("Hello " + edittext.getText().toString() + "  Log in to View Sensor data");
-//                break;
-//        }
-//    }
+    }
 }

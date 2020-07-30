@@ -20,34 +20,34 @@
 
     <Button
         android:id="@+id/button_dp"
-        android:layout_width="96dp"
-        android:layout_height="38dp"
+        android:layout_width="77dp"
+        android:layout_height="35dp"
         android:background="@android:color/holo_red_dark"
-        android:text="Previous"
+        android:text="Go Back"
         android:textAllCaps="true"
         android:textColor="@color/productGridBackgroundColor"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963" />
+        app:layout_constraintVertical_bias="0.91" />
 
     <Button
         android:id="@+id/btn_2"
-        android:layout_width="76dp"
-        android:layout_height="34dp"
+        android:layout_width="77dp"
+        android:layout_height="30dp"
         android:background="@android:color/holo_red_dark"
-        android:text="Done"
+        android:text="About"
         android:textColor="@color/loginPageBackgroundColor"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.964" />
+        app:layout_constraintVertical_bias="0.977" />
 
     <ImageView
         android:id="@+id/imageView"

@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">RemoteSense by Sushant</string>
+    <string name="app_name">RemoteSense V 1.0 </string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="dp_message">You are in the second page of the view, Welcome to RemoteSense. Please enter your name below</string>
     <string name="username">Username</string>
+    <string name="learn"> About RemoteSense</string>
     <string name="password">Password</string>
     <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
     <string name="Enter_name">Enter your name</string>
@@ -23,5 +24,6 @@
     <string name="fcm_message">FCM Message</string>
     <string name="msg_subscribed">Subscribed to the topic</string>
     <string name="msg_subscribe_failed">Failed to subscribe to the topic</string>
+    <string name="about_RemoteSense">RemoteSense is a service and accompanying applocation that works in conjunction with IOT sensor device which senses the variable of interest (temperature, humidity) and reports it to the cloud services for further processing. Based on the processed data and defined triggerset up, the cloud service alerts the app user through notification to the RemoteSense app and also displays the recorded data in the application for the viewer to digest.</string>
 
 </resources>

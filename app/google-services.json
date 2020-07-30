@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "211049931527",
+    "firebase_url": "https://remotesense-fd923.firebaseio.com",
+    "project_id": "remotesense-fd923",
+    "storage_bucket": "remotesense-fd923.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211049931527:android:c170b5c98fe33387455ba2",
+        "android_client_info": {
+          "package_name": "com.example.remotesense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211049931527-anp2im38nfbhvjcpiq7f2t08dkom95fe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnTqwR2O7-KMO5Wfjr0VzRNR1JjUf6SM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211049931527-anp2im38nfbhvjcpiq7f2t08dkom95fe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

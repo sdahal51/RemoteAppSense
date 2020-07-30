@@ -13,7 +13,7 @@
         android:layout_height="53dp"
         android:layout_marginBottom="52dp"
         android:background="@android:color/holo_red_dark"
-        android:text="Click to Continue"
+        android:text="Click to See Data"
         android:textColor="@color/productGridBackgroundColor"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,8 +26,7 @@
         android:layout_width="352dp"
         android:layout_height="58dp"
         android:background="?android:attr/windowBackground"
-        android:capitalize="characters"
-        android:clickable="true"
+        android:clickable="false"
         android:fontFamily="sans-serif-black"
         android:text="RemoteSense "
         android:textColor="@android:color/holo_red_dark"
@@ -52,8 +51,8 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="210dp"
+        android:layout_height="66dp"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
         android:ems="10"
@@ -76,8 +75,36 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintVertical_bias="0.286" />
+
+    <Button
+        android:id="@+id/button_abt"
+        android:layout_width="95dp"
+        android:layout_height="72dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="@string/learn"
+        android:textColor="@color/toolbarIconColor"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <Switch
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_btn"
+        app:layout_constraintVertical_bias="0.36" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

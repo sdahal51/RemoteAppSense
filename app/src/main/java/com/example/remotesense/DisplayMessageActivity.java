@@ -26,6 +26,7 @@ import java.util.Date;
 
 public class DisplayMessageActivity extends AppCompatActivity {
     Button previous_button;
+    Button doneButton;
 
     RecyclerView recyclerView;
     DatabaseReference ref;
@@ -57,17 +58,19 @@ public class DisplayMessageActivity extends AppCompatActivity {
         database= FirebaseDatabase.getInstance();
         ref= database.getReference("RemoteSense");
 
-        Button donebutton= findViewById(R.id.btn_2);
-        donebutton.setOnClickListener(new View.OnClickListener() {
-
+        doneButton= findViewById(R.id.btn_2);
+        doneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                Toast.makeText(DisplayMessageActivity.this, "Goodbye! Exiting App", Toast.LENGTH_SHORT).show();
-                finishActivity(0);
-                System.exit(0);
+                Toast.makeText(DisplayMessageActivity.this, "Opening About page", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(DisplayMessageActivity.this, About.class);
+                startActivity(intent);
             }
+
             });
         previous_button = findViewById(R.id.button_dp);
         previous_button.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DisplayMessageActivity.this, MainActivity.class);
                 startActivity(intent);
